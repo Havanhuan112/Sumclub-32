@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Xúc Xắc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Thêm thẻ audio để phát nhạc -->
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mp3">
+        Trình duyệt của bạn không hỗ trợ thẻ audio.
+    </audio>
+    <!-- Form đăng nhập -->
+    <div class="form-container" id="form-container">
+        <h1>Chào mừng!</h1>
+        <p>Vui lòng nhập tên của bạn:</p>
+        <input type="text" id="username" placeholder="Nhập tên của bạn">
+        <button id="login-btn">Đăng nhập</button>
+    </div>
+
+    <!-- Khu vực trò chơi -->
+    <div id="game-area" class="hidden">
+        <!-- Hiển thị thông tin người dùng -->
+        <div id="user-info">
+            <span id="display-username"></span>
+            <span id="display-balance">Số dư: 10,000₫</span>
+        </div>
+
+        
+        <div class="menu">
+            <h3>
+
+.
+.
+</h3>
+            <div class="button-container">
+                <button id="bet-tai">Tài</button>
+                <button id="bet-xiu">Xỉu</button>
+                <button id="bet-chan">Chẵn</button>
+                <button id="bet-le">Lẻ</button>
+            </div>
+            <div id="bet-form" class="hidden">
+                <p>Nhập số tiền cược:</p>
+                <input type="number" id="bet-amount" placeholder="Nhập số tiền" min="1">
+                <button id="confirm-bet">Đặt cược</button>
+                <p id="error-message" class="hidden">Số dư không đủ!</p>
+            </div>
+        </div>
+
+        <p id="status">Hãy chọn một loại cược để bắt đầu!</p>
+        <div id="dice-container">
+            🎲
+        </div>
+        <div id="loading-message" class="hidden">Hệ thống đang xử lý cược của bạn. Vui lòng chờ...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
