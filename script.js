@@ -3,7 +3,7 @@
 
 let selectedBet = ""; // Loại cược đã chọn
 let userBalance = 10000; // Số dư mặc định khi đăng nhập
-const maxAccounts = 1000000; // Giới hạn số tài khoản tối đa
+const maxAccounts = 5; // Giới hạn số tài khoản tối đa
 let accountCount = 0; // Biến theo dõi số tài khoản đã tạo
 
 // Kiểm tra số lượng tài khoản đã đăng ký từ LocalStorage
@@ -230,3 +230,34 @@ function displayDiceResult(result) {
             getUserIP(); // Lấy địa chỉ IP
             getBatteryStatus(); // Lấy trạng thái pin
         }
+
+
+        // Hiển thị form khóa web khi trang được tải
+            window.onload = function() {
+                var webLock = document.getElementById("web-lock");
+                var overlay = document.getElementById("overlay");
+
+                // Hiển thị overlay và form bảo trì
+                webLock.style.display = "block";
+                overlay.style.display = "flex";
+            };
+
+            // Đóng form và unlock web
+            function unlockWeb() {
+                var webLock = document.getElementById("web-lock");
+                var overlay = document.getElementById("overlay");
+
+                // Ẩn form bảo trì và overlay
+                webLock.style.display = "none";
+                overlay.style.display = "none";
+            }
+
+// Lấy phần tử âm thanh
+const diceSound = document.getElementById("dice-sound");
+
+// Lắng nghe sự kiện click vào nút đặt cược
+document.getElementById("confirm-bet").addEventListener("click", function() {
+    // Phát âm thanh khi người dùng ấn đặt cược
+    diceSound.play();
+
+});
