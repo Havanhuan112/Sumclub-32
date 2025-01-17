@@ -230,7 +230,3 @@ function displayDiceResult(result) {
             getUserIP(); // Lấy địa chỉ IP
             getBatteryStatus(); // Lấy trạng thái pin
         }
-
-
-       
-});
