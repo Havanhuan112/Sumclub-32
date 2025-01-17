@@ -232,32 +232,5 @@ function displayDiceResult(result) {
         }
 
 
-        // Hiển thị form khóa web khi trang được tải
-            window.onload = function() {
-                var webLock = document.getElementById("web-lock");
-                var overlay = document.getElementById("overlay");
-
-                // Hiển thị overlay và form bảo trì
-                webLock.style.display = "block";
-                overlay.style.display = "flex";
-            };
-
-            // Đóng form và unlock web
-            function unlockWeb() {
-                var webLock = document.getElementById("web-lock");
-                var overlay = document.getElementById("overlay");
-
-                // Ẩn form bảo trì và overlay
-                webLock.style.display = "none";
-                overlay.style.display = "none";
-            }
-
-// Lấy phần tử âm thanh
-const diceSound = document.getElementById("dice-sound");
-
-// Lắng nghe sự kiện click vào nút đặt cược
-document.getElementById("confirm-bet").addEventListener("click", function() {
-    // Phát âm thanh khi người dùng ấn đặt cược
-    diceSound.play();
-
+       
 });
